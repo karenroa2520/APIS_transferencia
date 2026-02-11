@@ -21,20 +21,20 @@ let tiene = (datoscomentarios.length > 0) ? true : false;
 
 // Si el post tiene comentarios
 if (tiene) {
-  console.log("La publicación tiene comentarios, no se puede eliminar directamente");
+console.log("La publicación tiene comentarios, no se puede eliminar exactamente");
 
   // Primero elimino todos los comentarios del post
-  const eliminarComments = await eliminarComentarios(datoscomentarios);
-  console.log(eliminarComments);
+const eliminarComments = await eliminarComentarios(datoscomentarios);
+console.log(eliminarComments);
 
   // Después de eliminar los comentarios, elimino la publicación
-  const eliminarPost = await eliminarPublicacion(postId);
-  console.log(eliminarPost);
+const eliminarPost = await eliminarPublicacion(postId);
+console.log(eliminarPost);
 
 } else {
   // Si el post no tiene comentarios, se puede eliminar sin problema
-  console.log("La publicación no tiene comentarios, sí se puede eliminar");
+console.log("La publicación no tiene comentarios, sí se puede eliminar");
 
-  const eliminacion = await eliminarPublicacion(postId);
-  console.log(eliminacion);
+const eliminacion = await eliminarPublicacion(postId);
+console.log(eliminacion);
 }
